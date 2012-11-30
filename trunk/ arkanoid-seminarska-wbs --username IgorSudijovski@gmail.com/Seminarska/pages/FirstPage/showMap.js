@@ -3,6 +3,7 @@
     this.mapsID = [];
     this.played = [];
     this.getMap = function (index) {
+        if (this.maps.length == 0) return;
         var str = this.maps[index];
         var points = str.split(";");
         var map = [];

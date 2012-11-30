@@ -74,6 +74,101 @@ function setMapFromFile() {
         });
     });
 }
+function setSettings() {
+    Windows.Storage.KnownFolders.documentsLibrary.getFileAsync("settings.ply").done(function (file) {
+        Windows.Storage.FileIO.readTextAsync(file).done(function (sett) {
+            var str = sett.split("\n");
+            for (var i = 0; i < str.length; i++) {
+                var k = str[i].split(":");
+                var index = parseInt(k[1]);
+                if (k[0] == "level") {
+                    setLevel(index);
+                }
+                if(k[0] == "ball"){
+                    setBallColor(index);
+                }
+                if (k[0] == "base") {
+                    setBaseColor(index);
+                }
+                if (k[0] == "element") {
+                    setElementColor(index);
+                }
+                if (k[0] == "user") {
+                    var user = k[1].split("\r")[0];
+                    var pass = str[i + 1].split(":")[1];
+                    var post = {
+                        user: user,
+                        pass: pass
+                    }
+                    WinJS.xhr({
+                        type: 'post',
+                        url: host + 'signIn.php',
+                        data: formatParams(post),
+                        headers: { "Content-type": "application/x-www-form-urlencoded" },
+                    }).done(function completed(request) {
+                        document.getElementById("message").innerHTML = "";
+                        var a = JSON.parse(request.responseText);
+                        if (a.error != null) {
+                            document.getElementById("playername").value = a.error;
+                        } else {
+                            loginUser(a.user, a.score,pass,false);
+                        }
+                    },
+        function error(request) {
+            document.getElementById("playername").value = request.statusText;
+        },
+        function progress(request) {
+        });
+                }
+            }
+        });
+    });
+}
+function loginUser(user, score,pass,keeplogin) {
+    sessionStorage.setItem("user", user);
+    document.getElementById("playername").readOnly = "readonly";
+    document.getElementById("playername").value = user + " - " + score;
+    document.getElementById("singOut").style.display = "inline";
+    document.getElementById("loginApp").style.display = "none";
+    document.getElementById("registerApp").style.display = "none";
+    document.getElementById("forgetApp").style.display = "none";
+    if (keeplogin) {
+        Windows.Storage.KnownFolders.documentsLibrary.getFileAsync("settings.ply").done(function (file) {
+            Windows.Storage.FileIO.readTextAsync(file).done(function (sett) {
+                var str = sett.split("\n");
+                var instr = "";
+                var i;
+                for (i = 0; i < 4; i++) {
+                    instr += str[i] + "\n";
+                }
+                instr += "user:" + user + "\n";
+                instr += "password:" + pass;
+                Windows.Storage.FileIO.writeTextAsync(file, instr);
+            });
+        });
+    }
+}
+function signOut(e) {
+    sessionStorage.removeItem("user");
+    document.getElementById("playername").removeAttribute("readonly");
+    document.getElementById("playername").value = "";
+    document.getElementById("singOut").style.display = "none";
+    document.getElementById("loginApp").style.display = "inline";
+    document.getElementById("registerApp").style.display = "inline";
+    document.getElementById("forgetApp").style.display = "inline";
+    Windows.Storage.KnownFolders.documentsLibrary.getFileAsync("settings.ply").done(function (file) {
+        Windows.Storage.FileIO.readTextAsync(file).done(function (sett) {
+            var str = sett.split("\n");
+            var instr = "";
+            var i;
+            for (i = 0; i < 3; i++) {
+                instr += str[i] + "\n";
+            }
+            instr += str[i];
+            Windows.Storage.FileIO.writeTextAsync(file, instr);
+        });
+    });
+}
 function init() {
 
 
@@ -95,6 +190,8 @@ function init() {
     /*jQuery.getJSON('http://localhost/Arkanoid/getMaps.php', function (data) {
         var a = data;
     });*/
+    setSettings();
+    
     jQuery.ajax({ 
         url: host + 'getMaps.php', 
         dataType: 'json', 
@@ -180,7 +277,7 @@ function init() {
     button.onclick = buttonClick;
     var login = document.getElementById("loginApp");
     login.onclick = loginApp;
-
+    document.getElementById("singOut").onclick = signOut;
 }
 function formatParams(p) {
     var queryStr = "";
@@ -209,6 +306,12 @@ function indexChange(e) {
     ply.played = allmap.getPlayed(index);
     drawmap.draw(con,ply);
 }
+function setLevel(index) {
+    var levels = new Levels();
+    var levelcontrol = document.getElementById("levelText");
+    ply.level = levels.levels[index];
+    levelcontrol.innerHTML = "level: " + levels.levels[index];
+}
 function changeLevel(e) {
     var index;
     if (e.detail != null) {
@@ -216,10 +319,13 @@ function changeLevel(e) {
     } else {
         index = colorlistview.selection.getIndices()[0];
     }
-    var levels = new Levels();
-    var levelcontrol = document.getElementById("levelText");
-    ply.level = levels.levels[index];
-    levelcontrol.innerHTML = "level: " + levels.levels[index];
+    setLevel(index);
+}
+function setBallColor(index) {
+    var colors = new Colors();
+    var levelcontrol = document.getElementById("ballColor");
+    ply.colorBall = colors.colors[index];
+    levelcontrol.src = colors.colorsImg[index];
 }
 function colorball(e) {
     var index;
@@ -228,12 +334,14 @@ function colorball(e) {
     } else {
         index = colorlistview.selection.getIndices()[0];
     }
+    setBallColor(index);
+}
+function setBaseColor(index) {
     var colors = new Colors();
-    var levelcontrol = document.getElementById("ballColor");
-    ply.colorBall = colors.colors[index];
+    var levelcontrol = document.getElementById("baseImg");
+    ply.colorBase = colors.colors[index];
     levelcontrol.src = colors.colorsImg[index];
 }
-
 function changebackground(e) {
     var index;
     if (e.detail != null) {
@@ -241,10 +349,23 @@ function changebackground(e) {
     } else {
         index = colorlistview.selection.getIndices()[0];
     }
-    var colors = new Colors();
-    var levelcontrol = document.getElementById("baseImg");
-    ply.colorBase = colors.colors[index];
-    levelcontrol.src = colors.colorsImg[index];
+    setBaseColor(index);
+}
+function setElementColor(index) {
+    var elements = new ElementsColor();
+    var levelcontrol = document.getElementById("elementImg");
+    ply.colorelements = elements.elemets[index];
+    levelcontrol.src = elements.elemtnsImg[index];
+    var canvas = document.getElementById('drawMap');
+    var con = canvas.getContext('2d');
+    var mapForDraw;
+    if (drawmap.elements == null) {
+        mapForDraw = allmap.getMap(0);
+        if(mapForDraw != null)
+        drawmap.selectMap(mapForDraw);
+    }
+    if (mapForDraw != null)
+    drawmap.draw(con, ply);
 }
 function changeelement(e) {
     var index;
@@ -253,17 +374,8 @@ function changeelement(e) {
     } else {
         index = colorlistview.selection.getIndices()[0];
     }
-    var elements = new ElementsColor();
-    var levelcontrol = document.getElementById("elementImg");
-    ply.colorelements = elements.elemets[index];
-    levelcontrol.src = elements.elemtnsImg[index];
-    var canvas = document.getElementById('drawMap');
-    var con = canvas.getContext('2d');
-    if (drawmap.elements == null) {
-        var mapForDraw = allmap.getMap(0);
-        drawmap.selectMap(mapForDraw);
-    }
-    drawmap.draw(con, ply);
+    setElementColor(index);
+    
 }
 function buttonClick() {
     ply.name = document.getElementById("playername").value;

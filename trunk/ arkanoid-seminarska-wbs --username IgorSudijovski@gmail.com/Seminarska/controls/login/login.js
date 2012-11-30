@@ -2,6 +2,9 @@
     document.getElementById("message").innerHTML = "";
     var btn = document.getElementById("btnSubmit");
     btn.onclick = submitLogin;
+    document.getElementById("user").value = "";
+    document.getElementById("password").value = "";
+    document.getElementById("checkbox").checked = false;;
 }
 function submitLogin(e) {
     var user = document.getElementById("user").value;
@@ -11,6 +14,7 @@ function submitLogin(e) {
         user: user,
         pass:pass
     }
+    
     WinJS.xhr({
         type: "post",
         url: host + 'signIn.php',
@@ -21,13 +25,16 @@ function submitLogin(e) {
         var a = JSON.parse(request.responseText);
         if (a.error != null) {
             document.getElementById("message").innerHTML = a.error;
+        } else {
+            loginUser(a.user, a.score, pass, checkbox.checked);
+            document.getElementById("loginApp").winControl.flyout.hide();
         }
-    }, 
-        function error(request) {
-            document.getElementById("message").innerHTML = request.statusText;
-        }, 
-        function progress(request) {
-            document.getElementById("message").innerHTML = "processing...";
-        });
+    },
+    function error(request) {
+        document.getElementById("message").innerHTML = request.statusText;
+    },
+    function progress(request) {
+        document.getElementById("message").innerHTML = "processing...";
+    });
 
 }
