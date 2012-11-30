@@ -74,6 +74,33 @@ function setMapFromFile() {
         });
     });
 }
+function saveSettings(e) {
+    Windows.Storage.KnownFolders.documentsLibrary.getFileAsync("settings.ply").done(function (file) {
+        Windows.Storage.FileIO.readTextAsync(file).done(function (sett) {
+            var c = new Colors();
+            var e = new ElementsColor();
+            var l = new Levels();
+            var str = sett.split("\n");
+            var asd = document.getElementById("ballColor").attributes[2].value;
+            var instr = "lavel:" + getIndexFromArray(l.levels, document.getElementById("levelText").innerHTML.split(": ")[1]) + "\n";
+            instr += "ball:" + getIndexFromArray(c.colorsImg, document.getElementById("ballColor").attributes[2].value) + "\n";
+            instr += "base:" + getIndexFromArray(c.colorsImg, document.getElementById("baseImg").attributes[2].value) + "\n";
+            if (str.length <= 4) {
+                instr += "element:" + getIndexFromArray(e.elemtnsImg, document.getElementById("elementImg").attributes[2].value);
+            } else {
+                instr += "element:" + getIndexFromArray(e.elemtnsImg, document.getElementById("elementImg").attributes[2].value) + "\n";
+                instr += str[4] + "\n" + str[5];
+            }            
+            Windows.Storage.FileIO.writeTextAsync(file, instr);
+        });
+    });
+}
+function getIndexFromArray(array, src) {
+    for (var i = 0; i < array.length; i++) {
+        if (array[i] == src) return i;
+    }
+    return -1;
+}
 function setSettings() {
     Windows.Storage.KnownFolders.documentsLibrary.getFileAsync("settings.ply").done(function (file) {
         Windows.Storage.FileIO.readTextAsync(file).done(function (sett) {
@@ -81,7 +108,7 @@ function setSettings() {
             for (var i = 0; i < str.length; i++) {
                 var k = str[i].split(":");
                 var index = parseInt(k[1]);
-                if (k[0] == "level") {
+                if (k[0] == "lavel") {
                     setLevel(index);
                 }
                 if(k[0] == "ball"){
@@ -278,6 +305,7 @@ function init() {
     var login = document.getElementById("loginApp");
     login.onclick = loginApp;
     document.getElementById("singOut").onclick = signOut;
+    document.getElementById("save").onclick = saveSettings;
 }
 function formatParams(p) {
     var queryStr = "";
