@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>IGOR</Machine>
+    <WindowsUser>Igor</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <RegisteredManifestChecksum>D73D026130A727CF98F0983832C6FA925F22F7AF84620A3DEE5FB24DBF11D76E</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>79cf7c25-9bed-4222-b325-3547343b5a0a_1.0.0.0_neutral__d58339s9c8x92</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>79cf7c25-9bed-4222-b325-3547343b5a0a_d58339s9c8x92!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>79cf7c25-9bed-4222-b325-3547343b5a0a</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=sudij_000</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-11-30T01:32:33.986</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\controls\forget\forget.html">
+      <PackagePath>controls\forget\forget.html</PackagePath>
+      <Modified>2012-11-30T01:41:14.729</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\controls\login\login.html">
+      <PackagePath>controls\login\login.html</PackagePath>
+      <Modified>2012-11-30T01:43:22.804</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\controls\register\register.html">
+      <PackagePath>controls\register\register.html</PackagePath>
+      <Modified>2012-11-30T01:41:13.572</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\controls\top10\top10.html">
+      <PackagePath>controls\top10\top10.html</PackagePath>
+      <Modified>2012-11-30T01:39:36.578</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\game.html">
+      <PackagePath>game.html</PackagePath>
+      <Modified>2012-11-29T00:07:00.377</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\pages\FirstPage\default.html">
+      <PackagePath>pages\FirstPage\default.html</PackagePath>
+      <Modified>2012-11-30T01:33:18.764</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\controls\login\login.css">
+      <PackagePath>controls\login\login.css</PackagePath>
+      <Modified>2012-11-30T01:43:37.247</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\css\index.css">
+      <PackagePath>css\index.css</PackagePath>
+      <Modified>2012-11-29T20:47:03.129</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\css\Microsoft.VisualStudio.Blend.Html.Intrinsic.Grid.css">
+      <PackagePath>css\Microsoft.VisualStudio.Blend.Html.Intrinsic.Grid.css</PackagePath>
+      <Modified>2012-11-20T00:23:03.332</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\css\default.css">
+      <PackagePath>css\default.css</PackagePath>
+      <Modified>2012-11-22T10:41:02.714</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\images\black.jpg">
+      <PackagePath>images\black.jpg</PackagePath>
+      <Modified>2012-11-19T23:12:54.368</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\images\blue.jpg">
+      <PackagePath>images\blue.jpg</PackagePath>
+      <Modified>2012-11-19T22:26:08.503</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\images\cursor.jpg">
+      <PackagePath>images\cursor.jpg</PackagePath>
+      <Modified>2012-11-22T10:52:52.295</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\images\green.jpg">
+      <PackagePath>images\green.jpg</PackagePath>
+      <Modified>2012-11-19T22:25:50.592</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\images\index1.jpg">
+      <PackagePath>images\index1.jpg</PackagePath>
+      <Modified>2012-11-20T01:46:27.343</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\images\index2.jpg">
+      <PackagePath>images\index2.jpg</PackagePath>
+      <Modified>2012-11-20T01:52:52.700</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\images\index3.jpg">
+      <PackagePath>images\index3.jpg</PackagePath>
+      <Modified>2012-11-20T01:54:28.147</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\images\map.jpg">
+      <PackagePath>images\map.jpg</PackagePath>
+      <Modified>2012-11-13T22:45:21.165</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\images\orange.jpg">
+      <PackagePath>images\orange.jpg</PackagePath>
+      <Modified>2012-11-19T22:25:19.674</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\images\pic1.jpg">
+      <PackagePath>images\pic1.jpg</PackagePath>
+      <Modified>2012-11-19T23:33:07.390</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\images\pic2.jpg">
+      <PackagePath>images\pic2.jpg</PackagePath>
+      <Modified>2012-11-19T23:40:23.930</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\images\pic3.jpg">
+      <PackagePath>images\pic3.jpg</PackagePath>
+      <Modified>2012-11-19T23:45:39.515</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\images\red.jpg">
+      <PackagePath>images\red.jpg</PackagePath>
+      <Modified>2012-11-19T22:23:43.573</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\images\white.jpg">
+      <PackagePath>images\white.jpg</PackagePath>
+      <Modified>2012-11-19T23:13:05.861</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\images\yellow.jpg">
+      <PackagePath>images\yellow.jpg</PackagePath>
+      <Modified>2012-11-19T22:25:09.097</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\images\logo.png">
+      <PackagePath>images\logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-11-23T08:00:13.215</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\images\smalllogo.png">
+      <PackagePath>images\smalllogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-11-23T08:09:00.399</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\images\splashlogo.png">
+      <PackagePath>images\splashlogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-11-23T08:10:56.297</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\images\splashscreen.png">
+      <PackagePath>images\splashscreen.png</PackagePath>
+      <Modified>2012-07-26T10:30:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\images\storelogo.png">
+      <PackagePath>images\storelogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-07-26T10:30:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\images\WideLogo.png">
+      <PackagePath>images\WideLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-11-23T08:07:47.707</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\js\ball.js">
+      <PackagePath>js\ball.js</PackagePath>
+      <Modified>2012-11-22T10:31:51.519</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\js\base.js">
+      <PackagePath>js\base.js</PackagePath>
+      <Modified>2012-11-20T01:17:10.825</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\js\data.js">
+      <PackagePath>js\data.js</PackagePath>
+      <Modified>2012-11-18T20:05:37.410</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\js\default.js">
+      <PackagePath>js\default.js</PackagePath>
+      <Modified>2012-11-22T11:37:51.803</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\js\jquery-1.8.3.min.js">
+      <PackagePath>js\jquery-1.8.3.min.js</PackagePath>
+      <Modified>2012-11-27T19:48:07.441</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\js\map.js">
+      <PackagePath>js\map.js</PackagePath>
+      <Modified>2012-11-22T10:34:01.746</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\js\mapTest.js">
+      <PackagePath>js\mapTest.js</PackagePath>
+      <Modified>2012-11-19T15:08:38.641</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\js\odometer.js">
+      <PackagePath>js\odometer.js</PackagePath>
+      <Modified>2012-03-01T13:47:54.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\js\player.js">
+      <PackagePath>js\player.js</PackagePath>
+      <Modified>2012-11-29T00:06:36.669</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\js\test.js">
+      <PackagePath>js\test.js</PackagePath>
+      <Modified>2012-11-29T00:16:56.028</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\pages\FirstPage\initindex.js">
+      <PackagePath>pages\FirstPage\initindex.js</PackagePath>
+      <Modified>2012-11-29T00:14:04.257</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\pages\FirstPage\showMap.js">
+      <PackagePath>pages\FirstPage\showMap.js</PackagePath>
+      <Modified>2012-11-28T23:50:13.089</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\sounds\explode.wav">
+      <PackagePath>sounds\explode.wav</PackagePath>
+      <Modified>2012-11-22T10:24:03.361</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\sounds\Touch5.wav">
+      <PackagePath>sounds\Touch5.wav</PackagePath>
+      <Modified>2012-11-22T10:24:28.809</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\sounds\TouchBase.wav">
+      <PackagePath>sounds\TouchBase.wav</PackagePath>
+      <Modified>2012-11-22T10:22:17.247</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\sounds\toucn.wav">
+      <PackagePath>sounds\toucn.wav</PackagePath>
+      <Modified>2012-11-22T10:24:34.214</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2012-11-30T01:32:33.624</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Microsoft.WinJS.1.0\1.0\">
+      <Name>Microsoft.WinJS.1.0</Name>
+      <Version>1.0.8514.0</Version>
+      <Architecture>Neutral</Architecture>
+      <FrameworkIdentity>Name=Microsoft.WinJS.1.0, MinVersion=1.0.8514.0</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.0\ExtensionSDKs\Microsoft.WinJS.1.0\1.0\Microsoft.WinJS.1.0.appx</AppxLocation>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>
