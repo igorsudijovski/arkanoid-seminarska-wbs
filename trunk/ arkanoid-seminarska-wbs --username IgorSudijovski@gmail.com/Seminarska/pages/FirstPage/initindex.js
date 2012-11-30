@@ -11,6 +11,7 @@ var ply = new Player();
 var timer;
 var picindex = 2;
 var colorlistview;
+var host = 'http://localhost/Arkanoid/';
 function ElementsColor() {
     this.elemtnsImg = ["/images/pic1.jpg","/images/pic2.jpg","/images/pic3.jpg"];
     this.elemets = [["#FFD5D5", "#FF9797", "#FF2525", "#601A1A", "#301515"], ["#CACBFF", "#7375F7","#1215EC","#15175E","#050515"],["#C9FFCE","#60F56C","#00D712","#0D7716","#061608"]];
@@ -95,7 +96,7 @@ function init() {
         var a = data;
     });*/
     jQuery.ajax({ 
-        url: 'http://localhost/Arkanoid/getMaps.php', 
+        url: host + 'getMaps.php', 
         dataType: 'json', 
         success: function (data) {
             var map = data.allmaps;
@@ -177,6 +178,8 @@ function init() {
 
     var button = document.getElementById("play");
     button.onclick = buttonClick;
+    var login = document.getElementById("loginApp");
+    login.onclick = loginApp;
 
 }
 function formatParams(p) {
