@@ -1,0 +1,13 @@
+C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\bin\Release\resources.pri
+C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\bin\Release\AppxManifest.xml
+C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\bin\Release\Seminarska.build.appxrecipe
+C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\bld\Release\priconfig.xml.intermediate
+C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\bld\Release\layout.resfiles.intermediate
+C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\bld\Release\resources.resfiles.intermediate
+C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\bld\Release\pri.resfiles.intermediate
+C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\bld\Release\priconfig.xml
+C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\bld\Release\layout.resfiles
+C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\bld\Release\resources.resfiles
+C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\bld\Release\pri.resfiles
+C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\bld\Release\LanguageQualifiers.txt
+C:\Users\sudij_000\documents\visual studio 2012\Projects\Seminarska\Seminarska\bld\Release\ProjectArchitectures.txt

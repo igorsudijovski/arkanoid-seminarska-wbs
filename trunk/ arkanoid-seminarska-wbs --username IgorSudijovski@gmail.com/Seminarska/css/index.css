@@ -1,0 +1,152 @@
+﻿body {
+}
+
+#main {
+	width: 100%;
+	height: 100%;
+}
+
+#left {
+	width: 300px;
+	height: 100%;
+	float: left;
+}
+#drawMap {
+    width:300px;
+    height:350px;
+}
+
+#center {
+	position: relative;
+	float: left;
+	height: 100%;
+	width: auto;
+	left: 0px;
+	top: 0px;
+	display: block;
+    padding:30px;
+}
+
+#right {
+	float: right;
+	width: 300px;
+	height: 100%;
+}
+
+#left {
+	width: 100%;
+	height: 100%;
+}
+
+#center {
+	width: 100%;
+	height: 100%;
+}
+
+#right {
+	-ms-grid-column: 3;
+	width: 100%;
+	height: 100%;
+}
+.pickMap {
+    width: 100%;
+    height: 100%;
+}
+.colorPick {
+    width: 100%;
+    height: 80%;
+    margin: 10px;
+}
+
+.ms-grid-left {
+    display: -ms-grid;
+    -ms-grid-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+    -ms-grid-columns: 100%;
+    padding:10px;
+    width: 100%;
+    height: 100%;
+    border: solid;
+    border-width: 1px;
+}
+.colorelement {
+    padding: 5px;
+    width: 250px;
+    height: 15px;
+    overflow: hidden;
+    display: -ms-grid;
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 1fr;
+}
+.textforlevel {
+    padding: 5px;
+    width: 250px;
+    height: 15px;
+    overflow: hidden;
+    display: -ms-grid;
+    text-align:center;
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 1fr;
+}
+.appbar {
+    float: left;
+}
+.elementmap {
+    background-color: #6a86b1;
+    padding: 10px;
+    width: 250px;
+    height: 60px;
+    overflow: hidden;
+    display: -ms-grid;
+    -ms-grid-columns: auto 1fr;
+    -ms-grid-rows: (auto)[4];
+}
+    .mapImg {
+        -ms-grid-column: 1;
+        -ms-grid-row: 2;
+        -ms-grid-row-span: 2;
+        height:50px;
+        width:50px;
+    }
+        .mapTitle {
+        -ms-grid-column: 2;
+        -ms-grid-row: 2;
+        margin-left:10px;
+    }
+        .colorImg {
+        -ms-grid-column: 1;
+        -ms-grid-row: 1;
+        height:10px;
+        width:200px;
+
+    }
+.spanlevel {
+            -ms-grid-column: 1;
+        -ms-grid-row: 1;
+        margin-left:10px;
+}
+.settingsText {
+    width: 90%;
+	padding-top: 10px;
+	padding-left: 15px;
+    padding-bottom: 20px;
+	height: 50px;
+	font-family: Verdana, serif;
+	font-size: 20px;
+    text-align:center;
+    vertical-align:middle;
+	color: #9B9898;
+}
+.imgstyle {
+    width:40px;
+    height:30px;
+}
+.bordertop {
+        border-top: solid;
+    border-width: 2px;
+    border-color:#fff;
+}
+.borderbottom {
+            border-bottom: solid;
+    border-width: 2px;
+        border-color:#fff;
+}
