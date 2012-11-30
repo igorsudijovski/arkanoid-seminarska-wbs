@@ -60,7 +60,7 @@
 
 .ms-grid-left {
     display: -ms-grid;
-    -ms-grid-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+    -ms-grid-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
     -ms-grid-columns: 100%;
     padding:10px;
     width: 100%;
