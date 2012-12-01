@@ -29,6 +29,15 @@ function register(e) {
         url: host + 'register.php',
         data: formatParams(post),
         headers: { "Content-type": "application/x-www-form-urlencoded" },
+    }).done(function completed(request) {
+        document.getElementById("messageforget").innerHTML = "";
+        var a = JSON.parse(request.responseText);
+        document.getElementById("messageregister").innerHTML = a.answer;
+    },
+    function error(request) {
+        document.getElementById("messageregister").innerHTML = request.statusText;
+    },
+    function progress(request) {
+        document.getElementById("messageregister").innerHTML = "processing...";
     });
-    document.getElementById("registerApp").winControl.flyout.hide();
 }

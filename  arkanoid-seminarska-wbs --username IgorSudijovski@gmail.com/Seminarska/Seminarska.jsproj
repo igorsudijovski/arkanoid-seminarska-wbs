@@ -62,6 +62,7 @@
     <Content Include="controls\register\register.html" />
     <Content Include="controls\register\register.js" />
     <Content Include="controls\top10\top10.html" />
+    <Content Include="controls\top10\top10.js" />
     <Content Include="css\index.css" />
     <Content Include="css\Microsoft.VisualStudio.Blend.Html.Intrinsic.Grid.css" />
     <Content Include="game.html" />
