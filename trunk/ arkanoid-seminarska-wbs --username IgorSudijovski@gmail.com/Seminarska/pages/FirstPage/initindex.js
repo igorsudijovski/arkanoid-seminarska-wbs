@@ -309,6 +309,7 @@ function init() {
     document.getElementById("mute").onclick = muteUnmute;
     document.getElementById("forgetApp").onclick = forgotApp;
     document.getElementById("registerApp").onclick = registerApp;
+    document.getElementById("Top10App").onclick = top10;
 }
 function formatParams(p) {
     var queryStr = "";
