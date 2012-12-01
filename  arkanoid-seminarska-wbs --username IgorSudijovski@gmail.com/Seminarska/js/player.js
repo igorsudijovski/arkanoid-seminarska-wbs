@@ -51,6 +51,7 @@
         }
     }
     this.showGameOver = function (context) {
+        if(sessionStorage.getItem("user") != null)
         document.getElementById("send").style.display = "inline";
         document.body.style.cursor = "";
         document.onmousemove = null;
