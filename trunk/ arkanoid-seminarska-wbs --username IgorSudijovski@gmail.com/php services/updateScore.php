@@ -10,6 +10,7 @@
  $user = $_POST['user'];
  $score = $_POST['score'];
  $u = new User($user);
+ $u->readUser($base);
  $u->updateScore($score);
  mysql_close($base);
 ?>

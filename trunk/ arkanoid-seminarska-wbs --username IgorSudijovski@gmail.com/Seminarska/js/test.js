@@ -14,6 +14,7 @@ var start = true;
 var sound = true;
 var mute;
 var level;
+var host = 'http://localhost/Arkanoid/';
 function count() {
     var days_i = "000" + curr;
     curr++;
@@ -70,6 +71,7 @@ function onMute(e) {
     }
 }
 function init() {
+
     mute = document.getElementById("mute");
     mute.onclick = onMute;
     if (!sound)
@@ -77,6 +79,12 @@ function init() {
     else
         mute.style.background = "#000000";
     readycount = 3;
+    snd = sessionStorage.getItem("mute");
+    if (snd == "true")
+        sound = true;
+    if (snd == "false")
+        sound = false;
+    onMute("null");
     curr = 0;
     canvas = document.getElementById('myCanvas');
     con = canvas.getContext('2d');
@@ -132,7 +140,8 @@ function init() {
     document.getElementById('PlayerName').innerText = player.name;
     document.getElementById('restart').onclick = restart;
     document.getElementById('back').onclick = back;
-
+    document.getElementById("send").style.display = "none";
+    document.getElementById("send").onclick = sendScore;
 
     //ball = new Ball();
     //base = new Base();
@@ -270,6 +279,21 @@ function PlaySound(path) {
         tmp.autoplay = true;
     }
 }
+function sendScore(e) {
+    var plyscore = document.getElementById("PlayerName").innerHTML;
+    var strply = plyscore.split(" - ");
+    var score =  player.points;
+    var post = {
+        user: strply[0],
+        score: score
+    }
+    WinJS.xhr({
+        type: "post",
+        url: host + 'updateScore.php',
+        data: formatParams(post),
+        headers: { "Content-type": "application/x-www-form-urlencoded" },
+    });
+}
 function moveBaseLeft() {
     var x = player.base.x + player.base.length / 2;
     con.clearRect(player.base.x, player.base.y - 1, player.base.length, player.base.height + 2);
@@ -287,4 +311,14 @@ function moveBaseRight() {
     else
         player.moveBase(x - 15, canvas.width);
     player.base.drawBase(con);
+}
+function formatParams(p) {
+    var queryStr = "";
+
+    for (var propertyName in p) {
+        var val = p[propertyName];
+        queryStr += propertyName + "=" + encodeURI(val) + "&";
+    }
+
+    return queryStr.slice(0, -1);
 }

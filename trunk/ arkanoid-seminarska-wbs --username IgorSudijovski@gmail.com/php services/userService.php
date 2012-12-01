@@ -54,8 +54,10 @@
 	}
 	function updateScore($newscore){
 		$nn = $this->scorenum + 1;
+		echo $nn;
 		$news = round((($this->score * $this->scorenum) + $newscore)/$nn);
-		mysql_query("UPDATE users SET score=$news, numscore=$nn WHERE user='$this->user'");	
+		echo $news;
+		mysql_query("UPDATE users SET score=$news, scorenum=$nn WHERE user='$this->user'");	
 	}	
  }
  function registerUser($u, $p, $q, $a,$base){

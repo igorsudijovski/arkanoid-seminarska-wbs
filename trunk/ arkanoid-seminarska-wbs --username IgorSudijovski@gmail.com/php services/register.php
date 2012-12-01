@@ -19,7 +19,7 @@
  }else{
 	mysql_close($base);
 	$an = new Answer();
-	$an->answer = "register error";
+	$an->answer = "the user exist choose anotherone";
 	exit(json_encode($an));
  }
 

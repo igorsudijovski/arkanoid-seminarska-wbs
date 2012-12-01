@@ -56,7 +56,7 @@ function setMapFromFile() {
     });*/
                 dataArray.push({ title: mapname, picture: "/images/map.jpg" });
                 allmap.maps.push(strpoints);
-                allmap.mapsID.push(1);
+                allmap.mapsID.push(-1);
                 allmap.played.push(1);
             }
             //if (sessionStorage.getItem("reload") == null || sessionStorage.getItem("reload") == "false") {
@@ -219,6 +219,7 @@ function init() {
     });*/
     setSettings();
     sessionStorage.setItem("mute", false);
+
     jQuery.ajax({ 
         url: host + 'getMaps.php', 
         dataType: 'json', 
@@ -429,6 +430,16 @@ function buttonClick() {
         ply.mapID = allmap.getMapID(0);
         ply.played = allmap.getPlayed(0);
     }
+    var post = {
+        ID: ply.mapID,
+        played: ply.played
+    }
+    WinJS.xhr({
+        type: "post",
+        url: host + 'updatePlayedMap.php',
+        data: formatParams(post),
+        headers: { "Content-type": "application/x-www-form-urlencoded" },
+    });
     sessionStorage.setItem("player", ply.string());
     clearInterval(timer);
     window.location.href = "../../game.html";
