@@ -1,5 +1,4 @@
 ﻿function top10() {
-    document.getElementById("refreshbtn").onclick = refresh;
     for (var i = 0; i < 10; i++) {
         document.getElementById("top" + (i + 1) + "p").innerHTML = "";
         document.getElementById("top" + (i + 1) + "pp").innerHTML = "";

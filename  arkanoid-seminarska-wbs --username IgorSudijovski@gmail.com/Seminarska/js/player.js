@@ -6,7 +6,7 @@
     this.balls = [];
     this.base;
     this.timerForTurnOff;
-    this.timer = 15;
+    this.timer = 10;
     this.map;
     this.odometar;
     this.odometarscore = 0;
@@ -51,6 +51,7 @@
         }
     }
     this.showGameOver = function (context) {
+        document.getElementById("send").style.display = "inline";
         document.body.style.cursor = "";
         document.onmousemove = null;
         context.font = "bold 80px sans-serif";
