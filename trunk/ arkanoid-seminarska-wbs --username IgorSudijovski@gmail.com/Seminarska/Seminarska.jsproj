@@ -55,10 +55,12 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <Content Include="controls\forget\forget.html" />
+    <Content Include="controls\forget\forget.js" />
     <Content Include="controls\login\login.css" />
     <Content Include="controls\login\login.html" />
     <Content Include="controls\login\login.js" />
     <Content Include="controls\register\register.html" />
+    <Content Include="controls\register\register.js" />
     <Content Include="controls\top10\top10.html" />
     <Content Include="css\index.css" />
     <Content Include="css\Microsoft.VisualStudio.Blend.Html.Intrinsic.Grid.css" />

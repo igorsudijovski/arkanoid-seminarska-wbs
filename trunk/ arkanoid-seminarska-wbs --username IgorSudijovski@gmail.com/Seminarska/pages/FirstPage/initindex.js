@@ -218,7 +218,7 @@ function init() {
         var a = data;
     });*/
     setSettings();
-    
+    sessionStorage.setItem("mute", false);
     jQuery.ajax({ 
         url: host + 'getMaps.php', 
         dataType: 'json', 
@@ -306,6 +306,9 @@ function init() {
     login.onclick = loginApp;
     document.getElementById("singOut").onclick = signOut;
     document.getElementById("save").onclick = saveSettings;
+    document.getElementById("mute").onclick = muteUnmute;
+    document.getElementById("forgetApp").onclick = forgotApp;
+    document.getElementById("registerApp").onclick = registerApp;
 }
 function formatParams(p) {
     var queryStr = "";
@@ -316,6 +319,18 @@ function formatParams(p) {
     }
 
     return queryStr.slice(0, -1);
+}
+function muteUnmute(e) {
+    var a = sessionStorage.getItem("mute");
+    if (a == "true") {
+        sessionStorage.setItem("mute", false);
+        document.getElementById("mute").winControl.icon = "volume";
+        document.getElementById("mute").winControl.label = "Mute";
+    } else {
+        sessionStorage.setItem("mute", true);
+        document.getElementById("mute").winControl.icon = "mute";
+        document.getElementById("mute").winControl.label = "UnMute";
+    }
 }
 function indexChange(e) {
     var index;

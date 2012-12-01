@@ -4,7 +4,7 @@
     btn.onclick = submitLogin;
     document.getElementById("user").value = "";
     document.getElementById("password").value = "";
-    document.getElementById("checkbox").checked = false;;
+    document.getElementById("checkbox").checked = false;
 }
 function submitLogin(e) {
     var user = document.getElementById("user").value;
